@@ -1,0 +1,280 @@
+body {
+  margin: 0;
+  font-family: "Metropolis", sans-serif;
+}
+
+h1 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+header {
+  height: 75px;
+  padding: 10px 65px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ebf2f2;
+}
+
+.header_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_logo img {
+  width: 300px;
+}
+
+.header_navigation-list {
+  display: flex;
+  gap: 20px;
+}
+
+.header_navigation-item {
+  position: relative;
+  padding: 20px 6px;
+  display: flex;
+  gap: 3px;
+}
+
+.header_navigation-link {
+  white-space: nowrap;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 55px;
+  left: -15px;
+  min-width: 150px;
+  display: none;
+  padding: 15px 20px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 5px 30px 0 rgba(108, 135, 135, 0.5);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.menu {
+  cursor: pointer;
+  display: none;
+}
+
+.dropdown-content a:hover {
+  color: #6db33f;
+}
+
+.header_navigation-item:hover .dropdown-content {
+  display: block;
+}
+
+.header_navigation-item::after {
+  content: url(./assets/icons/down_arrow.svg);
+  top: 0;
+  left: 100px;
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.info_container {
+  padding: 50px 65px;
+}
+
+.info_title {
+  margin: 40px 0 0;
+  font-size: 3.5rem;
+}
+
+.info_description {
+  max-width: 960px;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2.2rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.opportunities_wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #ebf2f2;
+}
+
+.opportunities_container {
+  max-width: 1344px;
+  display: grid;
+  grid-template-columns: minmax(530px, 1fr) minmax(530px, 1fr);
+  padding: 50px 120px;
+  gap: 24px;
+  background-color: #ebf2f2;
+}
+
+.opportunity_item {
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: all 0.2s;
+}
+
+.opportunity_item:hover {
+  cursor: pointer;
+  box-shadow: 0 10px 20px 0 rgba(108, 135, 135, 0.2);
+  transform: translateY(-3px);
+}
+
+.opportunity_item-image img {
+  width: 60px;
+  height: 60px;
+}
+
+.opportunity_item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.opportunity_item-title {
+  font-size: 24px;
+}
+
+.opportunity_item-description {
+  width: 330px;
+  margin-bottom: 12px;
+  line-height: 1.7rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+  header {
+    padding: 10px 30px;
+  }
+
+  .header_navigation-list {
+    gap: 5px;
+  }
+
+  .header_navigation-item {
+    gap: 0;
+  }
+
+  .dropdown-content {
+    min-width: 120px;
+  }
+
+  .opportunities_container {
+    padding: 50px 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .opportunity_item-description,
+  .opportunity_item-title {
+    width: 240px;
+  }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 999px) {
+  header {
+    padding: 10px 28px;
+  }
+
+  .info_container {
+    padding: 50px 28px;
+  }
+
+  .header_navigation {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .opportunities_container {
+    padding: 50px 28px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .opportunity_item {
+    flex: 1 1 auto;
+  }
+
+  .opportunity_item-description,
+  .opportunity_item-title {
+    width: 240px;
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 799px) {
+  header {
+    padding: 10px 15px;
+  }
+
+  .header_navigation {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .info_container {
+    padding: 50px 28px;
+  }
+
+  .opportunities_container {
+    padding: 50px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .opportunity_item-description {
+    max-width: 430px;
+    width: 100%;
+  }
+}
+
+.hi {
+  display: flex;
+}
+
+.hi div {
+  flex: 1;
+}
+
+.hi div:first-child {
+  flex-basis: 100px;
+}
