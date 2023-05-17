@@ -266,15 +266,3 @@ header {
     width: 100%;
   }
 }
-
-.hi {
-  display: flex;
-}
-
-.hi div {
-  flex: 1;
-}
-
-.hi div:first-child {
-  flex-basis: 100px;
-}
