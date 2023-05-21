@@ -129,8 +129,8 @@ header {
 .opportunities_container {
   max-width: 1344px;
   display: grid;
-  grid-template-columns: minmax(530px, 1fr) minmax(530px, 1fr);
-  padding: 50px 120px;
+  grid-template-columns: minmax(500px, 1fr) minmax(500px, 1fr);
+  padding: 50px 80px;
   gap: 24px;
   background-color: #ebf2f2;
 }
