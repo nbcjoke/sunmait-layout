@@ -17,65 +17,14 @@
           </a>
         </div>
         <nav class="header_navigation">
-          <ul class="header_navigation-list">
-            <li class="header_navigation-item">
-              <a class="header_navigation-link">Why Spring</a>
-              <div class="dropdown-content">
-                <a href="#">Overview</a>
-                <a href="#">Microservices</a>
-                <a href="#">Reactive</a>
-                <a href="#">Event Driven</a>
-                <a href="#">Cloud</a>
-                <a href="#">Web Applications</a>
-                <a href="#">Serverless</a>
-                <a href="#">Batch</a>
-              </div>
-            </li>
-            <li class="header_navigation-item">
-              <a class="header_navigation-link">Learn</a>
-              <div class="dropdown-content">
-                <a href="#">Overview</a>
-                <a href="#">Quickstart</a>
-                <a href="#">Guides</a>
-                <a href="#">Blog</a>
-              </div>
-            </li>
-            <li class="header_navigation-item">
-              <a class="header_navigation-link">Projects</a>
-              <div class="dropdown-content">
-                <a href="#">Overview</a>
-                <a href="#">Spring Boot</a>
-                <a href="#">Spring Framework</a>
-                <a href="#">Spring Cloud</a>
-                <a href="#">Spring Cloud Data Flow</a>
-                <a href="#">Spring Data</a>
-                <a href="#">Spring Security</a>
-              </div>
-            </li>
-            <li class="header_navigation-item">
-              <a class="header_navigation-link">Academy</a>
-              <div class="dropdown-content">
-                <a href="#">Courses</a>
-                <a href="#">Get Sertified</a>
-              </div>
-            </li>
-            <li class="header_navigation-item">
-              <a class="header_navigation-link">Support</a>
-              <div class="dropdown-content">
-                <a href="#">Overview</a>
-                <a href="#">Security Advisories</a>
-              </div>
-            </li>
-            <li class="header_navigation-item">
-              <a class="header_navigation-link">Community</a>
-              <div class="dropdown-content">
-                <a href="#">Overview</a>
-                <a href="#">Events</a>
-                <a href="#">Team</a>
-              </div>
-            </li>
-          </ul>
+          <ul class="header_navigation-list"></ul>
         </nav>
+        <div class="sidenav mySidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;</a
+          >
+          <div class="sidenav-navigation"></div>
+        </div>
         <div class="menu open_button" onclick="openNav()">
           <img src="./assets/icons/menu.svg" alt="menu" />
         </div>
@@ -92,98 +41,14 @@
         </p>
       </div>
       <div class="opportunities_wrapper">
-        <div class="opportunities_container">
-          <div class="opportunity_item">
-            <div class="opportunity_item-image">
-              <img
-                src="https://spring.io/img/projects/spring-boot.svg"
-                alt="Spring Boot"
-              />
-            </div>
-            <div class="opportunity_item-info">
-              <h1 class="opportunity_item-title">Spring Boot</h1>
-              <p class="opportunity_item-description">
-                Takes an opinionated view of building Spring applications and
-                gets you up and running as quickly as possible.
-              </p>
-            </div>
-          </div>
-          <div class="opportunity_item">
-            <div class="opportunity_item-image">
-              <img
-                src="https://spring.io/img/projects/spring-framework.svg?v=2"
-                alt="Spring Framework"
-              />
-            </div>
-            <div class="opportunity_item-info">
-              <h1 class="opportunity_item-title">Spring Framework</h1>
-              <p class="opportunity_item-description">
-                Provides core support for dependency injection, transaction
-                management, web apps, data access, messaging, and more.
-              </p>
-            </div>
-          </div>
-          <div class="opportunity_item">
-            <div class="opportunity_item-image">
-              <img
-                src="https://spring.io/img/projects/spring-data.svg"
-                alt="Spring Data"
-              />
-            </div>
-            <div class="opportunity_item-info">
-              <h1 class="opportunity_item-title">Spring Data</h1>
-              <p class="opportunity_item-description">
-                Provides a consistent approach to data access – relational,
-                non-relational, map-reduce, and beyond.
-              </p>
-            </div>
-          </div>
-          <div class="opportunity_item">
-            <div class="opportunity_item-image">
-              <img
-                src="https://spring.io/img/projects/spring-cloud.svg"
-                alt="Spring Cloud"
-              />
-            </div>
-            <div class="opportunity_item-info">
-              <h1 class="opportunity_item-title">Spring Cloud</h1>
-              <p class="opportunity_item-description">
-                Provides a set of tools for common patterns in distributed
-                systems. Useful for building and deploying microservices.
-              </p>
-            </div>
-          </div>
-          <div class="opportunity_item">
-            <div class="opportunity_item-image">
-              <img
-                src="https://spring.io/img/projects/spring-data-flow.svg"
-                alt="Spring Cloud Data Flow"
-              />
-            </div>
-            <div class="opportunity_item-info">
-              <h1 class="opportunity_item-title">Spring Cloud Data Flow</h1>
-              <p class="opportunity_item-description">
-                Provides an orchestration service for composable data
-                microservice applications on modern runtimes.
-              </p>
-            </div>
-          </div>
-          <div class="opportunity_item">
-            <div class="opportunity_item-image">
-              <img
-                src="https://spring.io/img/projects/spring-security.svg"
-                alt="Spring Security"
-              />
-            </div>
-            <div class="opportunity_item-info">
-              <h1 class="opportunity_item-title">Spring Security</h1>
-              <p class="opportunity_item-description">
-                Protects your application with comprehensive and extensible
-                authentication and authorization support.
-              </p>
-            </div>
-          </div>
-        </div>
+        <input
+          placeholder="Search..."
+          class="input"
+          type="search"
+          oninput="debounce()"
+        />
+        <h1 class="error_title"></h1>
+        <div class="opportunities_container"></div>
       </div>
     </main>
     <script src="script.js"></script>

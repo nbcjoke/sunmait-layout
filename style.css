@@ -52,6 +52,7 @@ header {
   padding: 20px 6px;
   display: flex;
   gap: 3px;
+  cursor: pointer;
 }
 
 .header_navigation-link {
@@ -123,11 +124,35 @@ header {
 .opportunities_wrapper {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   background-color: #ebf2f2;
+}
+
+.input {
+  max-width: 500px;
+  width: 100%;
+  padding: 15px 10px;
+  margin: 50px auto 0;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.3s;
+  font-size: 20px;
+}
+
+.input:hover,
+.input:focus {
+  border: 1px solid #000;
+}
+
+.error_title {
+  margin-top: 15px;
+  text-align: center;
 }
 
 .opportunities_container {
   max-width: 1344px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: minmax(500px, 1fr) minmax(500px, 1fr);
   padding: 50px 80px;
@@ -265,4 +290,89 @@ header {
     max-width: 430px;
     width: 100%;
   }
+}
+
+.sidenav {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: #191e1e;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: #fff;
+}
+
+.links_wrapper {
+  padding: 50px;
+  height: 0;
+}
+
+.is_hidden {
+  display: none;
+}
+
+.sidenav-navigation {
+  padding: 50px;
+}
+
+.navigation-item {
+  position: relative;
+}
+
+.navigation-item a {
+  display: flex;
+  padding: 8px 0;
+}
+
+.navigation-item > a {
+  font-size: 32px;
+  line-height: 48px;
+  color: #fff;
+  border-bottom: 1px solid #98afae;
+}
+
+.navigation-item > a::after {
+  position: absolute;
+  content: url(./assets/icons/down_arrow-white.svg);
+  top: 11px;
+  right: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.navigation-item.expanded > a::after {
+  top: 40px;
+  transform: rotate(180deg);
+}
+
+.navigation-item a:hover {
+  color: #6db33f;
+}
+
+.nested {
+  display: none;
+}
+
+.nested > a {
+  font-size: 20px;
+  color: #98afae;
+}
+
+.navigation-item.expanded .nested {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
 }
